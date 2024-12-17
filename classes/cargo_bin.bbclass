@@ -115,7 +115,7 @@ cargo_bin_do_compile() {
     export CARGO_TARGET_${@rust_target(d, 'TARGET').replace('-','_').upper()}_LINKER="${WRAPPER_DIR}/linker-wrapper.sh"
     export CARGO_HOST_LINKER="${WRAPPER_DIR}/linker-native-wrapper.sh"
     export CARGO_BUILD_FLAGS="-C rpath"
-    export CARGO_PROFILE_RELEASE_DEBUG="true"
+    #export CARGO_PROFILE_RELEASE_DEBUG="true"
 
     # The CC crate defaults to using CFLAGS when compiling everything. We can
     # give it custom flags for compiling on the host.
